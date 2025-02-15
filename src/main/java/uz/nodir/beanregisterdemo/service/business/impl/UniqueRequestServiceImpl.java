@@ -19,6 +19,9 @@ import uz.nodir.beanregisterdemo.service.client.ClientService;
 @Slf4j
 @RequiredArgsConstructor
 public class UniqueRequestServiceImpl implements UniqueRequestService {
+    /*
+     Mock service
+     */
     private ClientService clientService;
 
     @Getter
@@ -35,12 +38,12 @@ public class UniqueRequestServiceImpl implements UniqueRequestService {
 
         // case 1
         log.info("Generated requestId from number: {}", getRequestIdNumber());
-        clientService.send(requestIdNumber, message);
+        clientService.send(getRequestIdNumber(), message);
 
 
         // case 2
         log.info("Generated requestId from string: {}", getRequestIdString());
-        clientService.send(requestIdString, message);
+        clientService.send(getRequestIdString(), message);
 
         log.info("Finished command to sending request to third party.");
     }
