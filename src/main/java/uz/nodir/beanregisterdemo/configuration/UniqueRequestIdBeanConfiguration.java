@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import uz.nodir.beanregisterdemo.model.annotation.UniqueRequestId;
 
 import java.lang.reflect.Field;
-import java.util.Random;
 import java.util.UUID;
 
 /**
@@ -22,7 +21,7 @@ import java.util.UUID;
 @Configuration
 @Slf4j
 public class UniqueRequestIdBeanConfiguration implements BeanPostProcessor {
-    private final Random random = new Random();
+
 
     @Override
     public Object postProcessAfterInitialization(Object bean, @NonNull String beanName) {
