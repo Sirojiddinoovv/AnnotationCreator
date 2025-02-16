@@ -24,6 +24,11 @@ public class UniqueRequestServiceImpl implements UniqueRequestService {
      */
     private ClientService clientService;
 
+    /*
+     Auto generate getRequestIdString method from Getter.
+     By this name will be taken in own bean post processor configuration
+     */
+
     @Getter
     @UniqueRequestId(maxLength = 16)
     private String requestIdString;
