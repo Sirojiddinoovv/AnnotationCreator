@@ -18,7 +18,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-public class TestController {
+public class UniqueIdTestController {
     private final UniqueRequestServiceImpl uniqueRequestService;
 
     @GetMapping
@@ -30,4 +30,6 @@ public class TestController {
                 )
         );
     }
+
+
 }
