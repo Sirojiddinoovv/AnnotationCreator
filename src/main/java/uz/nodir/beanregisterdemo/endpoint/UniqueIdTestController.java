@@ -4,6 +4,7 @@ package uz.nodir.beanregisterdemo.endpoint;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import uz.nodir.beanregisterdemo.service.business.impl.UniqueRequestServiceImpl;
@@ -17,6 +18,7 @@ import java.util.Map;
  **/
 
 @RestController
+@RequestMapping("/api/v1/unique")
 @RequiredArgsConstructor
 public class UniqueIdTestController {
     private final UniqueRequestServiceImpl uniqueRequestService;
