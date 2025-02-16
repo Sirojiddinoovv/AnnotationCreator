@@ -18,11 +18,11 @@ import java.util.Map;
 @RestControllerAdvice
 public class ExceptionAdvice {
 
-    @ExceptionHandler(value = {MethodArgumentNotValidException.class})
-    public ResponseEntity<?> methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException m) {
+    @ExceptionHandler(value = {MethodArgumentNotValidException.class, IllegalArgumentException.class})
+    public ResponseEntity<?> methodArgumentNotValidExceptionHandler(Exception e) {
         return ResponseEntity.ok(
                 Map.of(
-                        "error", m.getMessage()
+                        "error", e.getMessage()
                 )
         );
     }
